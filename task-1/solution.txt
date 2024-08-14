@@ -1,7 +1,6 @@
 mkdir abdo
 cd abdo
 touch one.txt two.txt three.txt four.txt
-cd
 mkdir BAD
 cd BAD
 touch bad.txt
