@@ -1,0 +1,21 @@
+git config --global user.name "boda137"
+git config --global user.email "abdosalah1372005@gmail.com"
+gh auth login -w -p https
+git clone https://github.com/boda137/abdo.salah.git
+cd abdo.salah
+mkdir task-2
+cd task-2
+touch greeting.txt
+echo "hello world" >> greeting.txt
+git add *
+git commit -m"Added greeting"
+git branch intro
+git checkout intro
+echo " I Love Git " >> greeting.txt
+git add *
+git commit -m"Added I Love Git"
+git checkout main
+git merge intro
+git tag -a v1
+git push origin main
+git push origin v1
