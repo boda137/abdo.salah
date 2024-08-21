@@ -1,0 +1,40 @@
+cd 
+mkdir project_files
+cd project_files
+mkdir reports logs data
+cd reports
+touch report1.md report2.md
+cd /home/osc/project_files/logs
+touch system.log error.log file1.pdf file2.pdf
+cd /home/osc/project_files/data
+touch data.csv info.txt
+cd /home/osc/project_files/reports
+nano report1.md
+cd /home/osc/project_files/logs
+nano system.log
+cd /home/osc/project_files/data
+nano data.csv
+cd /home/osc/project_files/logs
+tar -cvf logs_backup.tar *
+tar -xvf logs_backup.tar 
+cd /home/osc/project_files
+mv logs_backup.tar logs
+cd
+find ~ -name "*.md"
+find project_files -name "*.log"
+find project_file -name "file1.pdf"
+find project_file -iname "*.pdf"
+find logs -type f
+cd /home/osc/project_files/data
+ln -s data.csv link_data.csv
+nano link_data.csv
+cat data.csv
+rm link_data.csv
+cd /home/osc/project_files
+echo "summary start">>summary.txt
+date >>summary.txt
+wc -l summary.txt |tee -a summary.txt
+wc -m system.log >>summary.txt
+ls project_files | wc -l>>summary.txt
+cat summary.txt
+cd
